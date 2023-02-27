@@ -1,0 +1,568 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-size: 14px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+input,
+textarea,
+select {
+    box-sizing: border-box;
+}
+
+textarea {
+    font-family: 'Roboto';
+}
+
+image {
+    float: left;
+}
+
+fieldset {
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    text-align: center;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e9e9e9;
+    margin: 15px 0 30px;
+}
+
+form {
+    padding-bottom: 30px;
+}
+
+.wrapper {
+    max-width: 960px;
+    width: 54%;
+    margin: 0 auto;
+}
+
+.inputtext {
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #c5c5d4;
+    margin-bottom: 8px;
+}
+
+.inputmini {
+    padding: 10px 20px;
+}
+
+.date {
+    width: auto;
+}
+
+.inputcheck {
+    display: none;
+}
+
+.inputcheck + label {
+    position: relative;
+}
+
+.inputcheck + label::before,
+.inputcheck + label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+}
+
+.text {
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #bfbfbf;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.simple {
+    max-width: 330px;
+}
+
+.simple input,
+.simple textarea,
+.simple select {
+    font-size: 13px;
+    line-height: 1.6em;
+    font-family: "Arial";
+    padding: 8px 15px;
+    margin-bottom: 9px;
+}
+
+.city {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.city::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: 5px solid transparent;
+    border-top-color: #000;
+    z-index: 0;
+}
+
+.city select {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.topic textarea {
+    display: inline-block;
+    height: 130px;
+    resize: vertical;
+    min-height: 40px;
+    max-height: 130px;
+}
+
+.order input {
+    display: inline-block;
+    padding: 12px 27px;
+    width: 100%;
+    color: #fff;
+    font: bold 16px/1.5em 'Roboto';
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    background-color: #12d661;
+    transition: all 0.5s ease;
+}
+
+.order input:hover {
+    box-shadow: 0 2px 2.5px rgba(8,118,52,0.35);
+    background-color: #07be51;
+}
+
+.elements,
+.checkbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox {
+    max-width: 680px;
+}
+
+.formtable {
+    max-width: 680px;
+}
+
+.formtable td:first-child {
+    width: 30%;
+}
+
+.apply {
+    width: 69%;
+}
+
+.apply td {
+    vertical-align: top;
+}
+
+.apply td:first-child {
+    padding: 13px 0;
+}
+
+.elements .pickup {
+    color: #b3b3b3;
+}
+
+.pickup {
+    margin: 27px 10px;
+}
+
+.dis {
+    margin: 0;
+}
+
+.stats {
+    display: inline-block;
+}
+
+.information {
+    width: 75px;
+}
+
+.check + label {
+    padding: 0 20px 0 25px;
+}
+
+.check + label::before {
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.check:checked + label::after {
+    border-color: #244dd7;
+    transform: rotate(-405deg);
+}
+
+.check + label::after {
+    left: 4.5px;
+    top: 6px;
+    width: 7px;
+    height: 5px;
+    border: 2px solid transparent;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+
+.rad + label {
+    padding: 0 25px 0 25px;
+}
+
+.rad + label::before {
+    top: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.rad:checked + label::before {
+    border: 1px solid #3e6aff;
+}
+
+.rad:checked + label::after {
+    background-color: #3e6aff;
+}
+
+.rad + label::after {
+    left: 4px;
+    top: 6px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.disable + label::before {
+    background-color: #f7f7f7;
+}
+
+
+.styled + label {
+    padding-left: 65px;
+}
+
+.styled + label::before {
+    top: -3px;
+    width: 45px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: #cfcfd1;
+}
+
+.styled + label::after {
+    left: 2px;
+    top: -1px;
+    width: 21px;
+    height: 21px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.styled:checked + label::before {
+    background-color: #3e6aff;
+}
+
+.styled:checked + label::after {
+    left: 22px;
+}
+
+.gender p {
+    margin: 0;
+    padding: 30px 0;
+}
+
+.people + label {
+    padding-left: 85px;
+}
+
+.people:checked + label {
+    color: #3e6aff;
+}
+
+.people + label::before {
+    top: -28px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: #e8e8e8 url(../images/male.png) no-repeat center bottom -2px;
+}
+
+#woman + label::before {
+    background-image: url(../images/female.png);
+}
+
+.people:checked + label::before {
+    border: 2px solid #3e6aff;
+    background-image: url(../images/male_color.png);
+}
+
+/*.people:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 7px;
+    width: 58px;
+    height: 58px;
+    background-color: #cfcfd1;
+    border-radius: 50%;
+}*/
+
+#woman:checked + label::before {
+    background-image: url(../images/female_color.png);
+}
+
+.styledcheckboxes p {
+    margin: 25px 0;
+}
+
+.info p {
+    margin-bottom: 25px;
+}
+
+.foto {
+    display: none;
+}
+
+.foto + label {
+    width: 57%;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    padding: 12px 27px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    border-radius: 3px;
+    background-color: #3e6aff;
+    margin-bottom: 9px;
+}
+
+.foto + label:hover {
+    filter: drop-shadow(0px 2px 2.5px rgba(15,40,126,0.35));
+    background-color: #2857f4;
+}
+
+.tab p {
+    display: inline-block;
+    padding: 0;
+}
+
+.formparts {
+    margin-left: 108px;
+}
+
+.tableform {
+    max-width: 680px;
+}
+
+.tableform p {
+    margin: 5px 0 18px 0;
+}
+
+.insideform p {
+    margin-top: 9px;
+    margin-bottom: 5px;
+}
+.application {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.application th {
+    text-align: left;
+    padding: 0 10px 0 0;
+}
+
+.application th:last-child {
+    padding: 0;
+}
+
+.application label {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.return input {
+    display: inline-block;
+    margin-bottom: 50px;
+    padding: 12px 27px;
+    width: 100%;
+    color: #6e6f77;
+    font: bold 16px/1.5em "Roboto";
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #85868d;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+.return input:hover {
+    background-color: #85868d;
+    color: #fff;
+}
+
+.country {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.country::before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 34px;
+    border: 5px solid transparent;
+    border-top-color: #000;
+    z-index: 0;
+}
+
+.country select {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0px 20px;
+    width: 100%;
+    outline: none;
+    border-radius: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.fixedform {
+    position: fixed;
+    top: 56px;
+    right: 23%;
+    z-index: 999;
+}
+
+.fixedform label {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+}
+
+.agree {
+    margin-bottom: 14px;
+    font-weight: normal;
+}
+
+.agree label {
+    color: #000;
+    font-size: 13px;
+}
+
+.member + label::before {
+    top: -1px;
+}
+
+.insideform {
+    border-radius: 5px;
+    filter: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    padding: 25px 25px 20px 25px;
+}
+
+.forgot {
+    color: #3e6aff;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.closed + label {
+    position: absolute;
+    top: 79px;
+    right: 10px;
+    font-size: 20px;
+    z-index: 999;
+    transform: rotate(45deg);
+}
+
+.closed:checked ~ .insideform,
+.closed:checked ~ .text,
+.closed:checked + label {
+    display: none;
+}
+
+.send input {
+    padding: 10px 27px;
+}
